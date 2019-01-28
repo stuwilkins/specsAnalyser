@@ -1,4 +1,5 @@
 /data
+/bin
 /db
 /dbd
 /lib
@@ -6,3 +7,4 @@
 O.*/
 *~
 /documentation/doxygen
+envPaths
