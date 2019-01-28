@@ -24,7 +24,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 SUPPORT=/home/swilkins/epics
 
 ASYN =              $(SUPPORT)/asyn4-21
-AREADETECTOR =      $(SUPPORT)/areaDetectorR1-9-1
+AREA_DETECTOR =     $(SUPPORT)/areaDetectorR1-9-1
 BUSY =              $(SUPPORT)/busy-1-4
 CALC =              $(SUPPORT)/calc-3-0
 SSCAN =             $(SUPPORT)/sscan-2-8-1

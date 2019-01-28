@@ -26,6 +26,6 @@ specs_LIBS += busy
 # We need to link against the EPICS Base libraries
 specs_LIBS += $(EPICS_BASE_IOC_LIBS)
 
-include $(AREADETECTOR)/ADApp/commonDriverMakefile
+include $(AREA_DETECTOR)/ADApp/commonDriverMakefile
 
 include $(TOP)/configure/RULES
