@@ -15,12 +15,13 @@ epicsEnvSet("XSIZE",    "2048")
 epicsEnvSet("YSIZE",    "2048")
 epicsEnvSet("NCHANS",   "2048")
 
-drvAsynIPPortConfigure("SPECS_ASYN", "10.23.0.10:9999")
+drvAsynIPPortConfigure("SPECS_ASYN", "localhost:7010")
 asynSetTraceMask("SPECS_ASYN", 0, 0x9)
 asynSetTraceIOMask("P1", 0, 0x2)
 
 specsAnalyserConfig("$(PORT)", "SPECS_ASYN", 0, 0)
 
+dbLoadRecords("$(AREA_DETECTOR)/ADApp/Db/ADBase.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 dbLoadRecords("$(TOP)/db/specsAnalyzer.template", "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 dbLoadRecords("$(TOP)/db/specsAnalyzerDLD.template", "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 
